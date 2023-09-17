@@ -1,6 +1,33 @@
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
+
+  nav {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    float: left;
+  }
+
+  nav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  nav li a.active {
+    background-color: #3786E1;
+  }
   
   .no-button {
     background: none;
@@ -22,4 +49,5 @@ header, .project:not(:last-child) {
     font-weight: bold;
     margin-left: -5px;
   }
+
   
