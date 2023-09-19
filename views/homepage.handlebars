@@ -3,6 +3,11 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      {{post-info post}}
+       <a href="/post/{{post.id}}">{{post.title}}</a>
+        </h2>
+        <p>
+            Created on {{format_date post.date_created}}
+        </p>
+      {{!-- {{post-info post}} --}}
     </h2>
 {{/each}}
