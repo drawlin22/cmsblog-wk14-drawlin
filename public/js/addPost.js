@@ -1,10 +1,10 @@
 async function newPostHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_text = document.querySelector('textarea[name="post-text"]').value;
+    const title = document.querySelector("post-title").value;
+    const post_text = document.querySelector("post-text").value;
   
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/blogroutes`, {
       method: 'POST',
       body: JSON.stringify({
         title,
@@ -21,5 +21,6 @@ async function newPostHandler(event) {
       alert(response.statusText);
     }
   }
+  
   
   document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
