@@ -1,0 +1,15 @@
+
+<div class="text-center" >
+  <h2 id="bp-h">{{post.title}}</h2>
+  <p id="bp-p">{{post.post_text}}</p>
+  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+
+  {{> updateDelete this}}
+  <div class=" text-center">
+       <button class="btn btn-sm btn-danger blogpost-delete" data-id="{{id}}">DELETE</button>
+  </div>
+</div>
+
+
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>
