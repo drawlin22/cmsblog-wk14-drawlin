@@ -13,6 +13,9 @@
       <div class="form-group">
         <label for="project-name">Blog Post Title:</label>
         <input class="form-input" type="text" id="blogpost-title" name="blogpost-title" />
+        <label for>Blog Post Content:</label>
+        <input class="form-input" type="text" id="blogpost-content" name="blogpost-content" />
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Submit</button>
       </div>
       
   {{#if blogPosts.length}}

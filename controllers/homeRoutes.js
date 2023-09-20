@@ -8,8 +8,7 @@ router.get('/', async (req, res) => {
     const blogPostData = await Post.findAll({
       include: [
         {
-          model: User,
-          attributes: ['username'],
+           all: true, nested: true ,
         },
       ],
     });
@@ -32,8 +31,7 @@ router.get('/blogpost/:id', async (req, res) => {
     const blogpostData = await Post.findByPk(req.params.id, {
       include: [
         {
-          model: User,
-          attributes: ['username'],
+         all: true, nested:true
         },
       ],
     });

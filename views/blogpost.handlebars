@@ -1,0 +1,27 @@
+<div>
+<div class="text-center" >
+  <h2 id="bp-h">{{title}}</h2>
+  <p id="bp-p">{{post_text}}</p>
+  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+ <div>
+
+{{!-- {{#if newComment.length}} --}}
+ <h5>Comments:</h5>
+<div> 
+    {{#each newComment as |comment|}}
+    <p>
+        {{comment.comment_text}}
+    </p>
+    <p>
+        Added by: {{user.username}}, {{format_date comment.date_created}}
+    </p>
+{{/each}}
+</div>
+{{!-- {{/if}} --}}
+
+{{#if logged_in}}
+{{> comment this}}
+
+{{/if}}
+</div>
+<script src="/js/comment.js"></script>
