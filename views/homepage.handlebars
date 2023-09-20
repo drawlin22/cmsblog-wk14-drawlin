@@ -1,7 +1,7 @@
 <!-- Loop over each object in the projects array -->
 {{#each blogPosts as |post| }}
-<div class="project">
-  <div>
+<section class="project">
+  <section>
     <h2>
        <a href="/blogpost/{{post.id}}">{{post.title}}</a>
         </h2>
@@ -12,4 +12,6 @@
           Created on {{format_date post.date_created}}
         </p>
     </h2>
+  </setion>
+</section>
 {{/each}}

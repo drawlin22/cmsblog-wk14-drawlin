@@ -1,8 +1,8 @@
 async function newPostHandler(event) {
     event.preventDefault();
-  
-    const title = document.querySelector("post-title").value;
-    const post_text = document.querySelector("post-text").value;
+
+    const title = document.querySelector(".blogTitle").value;
+    const post_text = document.querySelector(".blogText").value;
   
     const response = await fetch(`/api/blogroutes`, {
       method: 'POST',
@@ -22,5 +22,5 @@ async function newPostHandler(event) {
     }
   }
   
-  
-  document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
+
+  document.querySelector(".submitPost").addEventListener("click", newPostHandler);
