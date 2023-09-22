@@ -1,7 +1,13 @@
+const deleteButtons = document.querySelectorAll('.delete-post-btn');
+
+deleteButtons.forEach(button => {
+  button.addEventListener('click', deleteHandler);
+});
+
 async function deleteHandler(event) {
     event.preventDefault();
   
-    const id = document.querySelector('.delete-post-btn').getAttribute('data-id')
+    const id = document.querySelectorAll('.delete-post-btn').getAttribute('data-id')
   
     const response = await fetch(`/api/blogroutes/${id}`, {
       method: 'DELETE',    
@@ -14,5 +20,5 @@ async function deleteHandler(event) {
     }
   }
 
-  document.querySelector('.delete-post-btn').addEventListener('click', deleteHandler);
+  document.querySelectorAll('.delete-post-btn').addEventListener('click', deleteHandler);
 
