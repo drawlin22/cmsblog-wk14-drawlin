@@ -7,8 +7,6 @@ deleteButtons.forEach(button => {
 async function deleteHandler(event) {
     event.preventDefault();
   
-    const id = document.querySelectorAll('.delete-post-btn').getAttribute('data-id')
-  
     const response = await fetch(`/api/blogroutes/${id}`, {
       method: 'DELETE',    
     });    
