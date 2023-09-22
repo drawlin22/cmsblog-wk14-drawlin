@@ -10,7 +10,7 @@ This project was to create a CMS style blog site to allow users to publish artic
 ](image.png)
 
 # Usage
-Deployed site: 
+Deployed site: https://cmsblog-wk14-drawlin-79c3f4e8219c.herokuapp.com/
 
 # Credits
 

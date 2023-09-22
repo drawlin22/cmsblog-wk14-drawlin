@@ -51,7 +51,7 @@ sequelize.sync({ force: false }).then(() => {
 ```md
 
 WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
+THEN I am able to update my post and taken back to an updated dashboard
 
 User name not displaying after welcome on the home page.
 delete post does not work
