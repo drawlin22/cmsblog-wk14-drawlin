@@ -1,11 +1,9 @@
 async function deleteHandler(event) {
     event.preventDefault();
   
-    const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length-1
-    ];
+    const id = document.querySelector('.delete-post-btn').getAttribute('data-id')
   
-    const response = await fetch(`/api/blogposts/${id}`, {
+    const response = await fetch(`/api/blogroutes/${id}`, {
       method: 'DELETE',    
     });    
   
