@@ -45,6 +45,28 @@ router.get('/blogpost/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/blogroutes/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    if (postData) {
+      const post = postData.get({ plain: true });
+
+      res.render('editDelete', {
+        layout: 'dashboard',
+        post,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect('login');
+  }
+});
+
+
+
+
 //get a single post
 // router.get('/blogpost/:id', withAuth, (req, res) => {
 //   Post.findOne({
