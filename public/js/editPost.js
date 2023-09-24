@@ -9,8 +9,8 @@ async function updateFormHandler(event) {
   
       if(event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
-    const title = document.querySelector('input[name="update-title"]').value;
-    const post_text = document.querySelector('textarea[name="update-content"]').value;
+    const title = document.querySelector('input[name="blogpost-title"]').value; /* added */
+    const post_text = document.querySelector('input[name="blogpost-content"]').value;
 
     if (title && post_text) {
     const response = await fetch(`/api/blogposts/${id}`, {
@@ -23,14 +23,15 @@ async function updateFormHandler(event) {
         'Content-Type': 'application/json'
       }
     })
-  }
-
     if (response.ok) {
       document.location.replace('/dashboard/');
     } else {
       alert(response.statusText);
     }
   }
+
   }
+  }
+
 
   
