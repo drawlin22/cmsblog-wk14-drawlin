@@ -4,12 +4,13 @@
 // updateButtons(button => {
 //   button.addEventListener('click', updateFormHandler);        
 // });
+const id = document.querySelector('input[name="post-id"]').value;
 
 async function updateFormHandler(event) {
     event.preventDefault();
   
-      if(event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+      // if(event.target.hasAttribute('data-id')) {
+    // const id = event.target.getAttribute('data-id');
     const title = document.querySelector('input[name="update-title"]').value; /* added */
     const post_text = document.querySelector('input[name="update-content"]').value;
     console.log(title, post_text);
@@ -32,7 +33,7 @@ async function updateFormHandler(event) {
     }
   }
 
-  }
+// }  
   }
 
   document.querySelector('.Submit-Update')
