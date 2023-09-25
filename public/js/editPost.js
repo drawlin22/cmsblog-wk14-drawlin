@@ -11,9 +11,10 @@ async function updateFormHandler(event) {
     const id = event.target.getAttribute('data-id');
     const title = document.querySelector('input[name="blogpost-title"]').value; /* added */
     const post_text = document.querySelector('input[name="blogpost-content"]').value;
+    console.log(title, post_text);
 
     if (title && post_text) {
-    const response = await fetch(`/api/blogposts/${id}`, {
+    const response = await fetch(`/api/dashboard/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
         title,
