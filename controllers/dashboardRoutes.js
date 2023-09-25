@@ -53,7 +53,7 @@ router.get('/blogroutes/:id', withAuth, async (req, res) => {
       const post = postData.get({ plain: true });
 
       res.render('editDelete', {
-        layout: 'dashboard',
+        // layout: 'dashboard',
         post,
       });
     } else {

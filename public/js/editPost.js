@@ -1,7 +1,7 @@
 const updateButtons = document.querySelectorAll('.update-post-btn');
 
 updateButtons.forEach(button => {
-  button.addEventListener('click', updateFormHandler);
+  button.addEventListener('click', updateFormHandler);        
 });
 
 async function updateFormHandler(event) {

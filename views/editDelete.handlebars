@@ -2,12 +2,12 @@
 <div class="text-center" >
   <h2 id="bp-h">{{post.title}}</h2>
   <p id="bp-p">{{post.post_text}}</p>
-  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+  {{!-- <p>Created by {{user.username}} on {{format_date date_created}}</p> --}}
 
   {{> updateDelete this}}
   <div class=" text-center">
-        <button class="btn btn-sm btn-danger delete-post-btn" data-id="{{id}}">DELETE</button> 
-         <button class="btn btn-sm btn-danger update-post-btn" data-id="{{post.id}}">UPDATE</button>
+        {{!-- <button class="btn btn-sm btn-danger delete-post-btn" data-id="{{id}}">DELETE</button> 
+         <button class="btn btn-sm btn-danger update-post-btn" data-id="{{post.id}}">UPDATE</button> --}}
   </div>
 </div>
 
