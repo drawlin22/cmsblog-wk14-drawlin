@@ -1,5 +1,5 @@
 const User = require('./User');
-const Post = require('./post');
+const Post = require('./notpost');
 const Comment = require('./Comment');
 
 Comment.belongsTo(User, {
